@@ -72,8 +72,7 @@ public class ThreadedMain extends Thread
                 }
             }
         };
-
-        action1.effectProcess();
-        action2.effectProcess();
+        action1.run();
+        action2.run();
     } //! need to develop some way to procedurally generate Threads or flip between action1.effectProcess() and action2.effectProcess()
 }
