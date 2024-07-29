@@ -28,7 +28,5 @@ public class Action implements Runnable
     public String toString(){return getName();}
 
     @Override
-    public void run() {
-        this.effectProcess();
-    }
+    public void run(){this.effectProcess();}
 }
