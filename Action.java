@@ -1,4 +1,4 @@
-public class Action
+public class Action implements Runnable
 {
     private boolean hasEffect;
     private int damage;
@@ -26,4 +26,9 @@ public class Action
     public void effectProcess(){}
 
     public String toString(){return getName();}
+
+    @Override
+    public void run() {
+        this.effectProcess();
+    }
 }

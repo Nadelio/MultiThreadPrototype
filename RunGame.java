@@ -10,12 +10,12 @@ public class RunGame
         Console console = System.console();
         if(console == null && !GraphicsEnvironment.isHeadless())
         {
-            String filename = ThreadedMain.class.getProtectionDomain().getCodeSource().getLocation().toString().substring(6);
+            String filename = Main.class.getProtectionDomain().getCodeSource().getLocation().toString().substring(6);
             try {Runtime.getRuntime().exec(new String[]{"cmd","/c","start","cmd","/k","java -jar \"" + filename + "\""});}catch(IOException e){}
         }
         else
         {
-            ThreadedMain.main(new String[0]);
+            Main.main(new String[0]);
             System.out.println("Program has ended, please type 'exit' to close the console");
         }
     }    
